@@ -1,0 +1,12 @@
+{
+  "name": "Golden Years Yoga",
+  "short_name": "GY Yoga",
+  "description": "Gentle, chair-friendly yoga for seniors and beginners.",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#15616d",
+  "icons": [
+    { "src": "assets/img/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}
