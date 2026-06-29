@@ -1,0 +1,34 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node \"C:\\\\Users\\\\nikhil\\\\.claude\\\\skills\\\\impeccable\\\\scripts\\\\context.mjs\")",
+      "Skill(impeccable)",
+      "Bash(node *)",
+      "Bash(curl -s -o /dev/null -w \"home %{http_code}\\\\n\" http://localhost:8123/)",
+      "Bash(curl -s -o /dev/null -w \"css %{http_code}\\\\n\" http://localhost:8123/assets/css/styles.css)",
+      "Bash(curl -s -o /dev/null -w \"favicon %{http_code}\\\\n\" http://localhost:8123/assets/favicon.svg)",
+      "Bash(curl -s -o /dev/null -w \"privacy %{http_code}\\\\n\" http://localhost:8123/privacy.html)",
+      "Bash(curl -s -o /dev/null -w \"missing %{http_code}\\\\n\" http://localhost:8123/nope.html)",
+      "mcp__plugin_playwright_playwright__browser_resize",
+      "mcp__plugin_playwright_playwright__browser_navigate",
+      "mcp__plugin_playwright_playwright__browser_evaluate",
+      "mcp__plugin_playwright_playwright__browser_take_screenshot",
+      "mcp__plugin_playwright_playwright__browser_console_messages",
+      "Bash(curl *)",
+      "mcp__plugin_playwright_playwright__browser_click",
+      "mcp__plugin_playwright_playwright__browser_wait_for",
+      "Bash(exit 1)",
+      "Bash(rm -f home-full.jpeg home-full2.jpeg home-mobile.jpeg product.jpeg cart.jpeg privacy.jpeg)",
+      "Bash(rm -rf .playwright-mcp)",
+      "Bash(mkdir -p tools)",
+      "Bash(cp \"C:/Users/nikhil/AppData/Local/Temp/claude/C--Users-nikhil-Documents-Applications-websites-flower/9b01b11b-815f-477f-996d-194c4800292d/scratchpad/gen-products.mjs\" tools/gen-products.mjs)",
+      "Read(//c/Users/nikhil/.claude/skills/impeccable/**)",
+      "Read(//c/Users/nikhil/.claude/skills/impeccable/scripts/**)",
+      "Read(//c/Users/nikhil/.claude/skills/impeccable/reference/**)",
+      "Bash(python -m http.server 8765)",
+      "mcp__plugin_playwright_playwright__browser_close",
+      "WebSearch",
+      "Bash(python -m http.server 8766)"
+    ]
+  }
+}
