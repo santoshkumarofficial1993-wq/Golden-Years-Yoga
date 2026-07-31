@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PayPal Help & Support | Call Now</title>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <style>
+        /* ───────────── Reset & Base ───────────── */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, system-ui, -apple-system, sans-serif;
+            background: #f5f7fa;
+            color: #1a1a2e;
+            line-height: 1.6;
+            padding-bottom: 100px;
+            /* space for floating button */;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ───────────── Header ───────────── */
+        .header {
+            background: linear-gradient(145deg, #003087, #001f5e);
+            color: #fff;
+            padding: 20px 0;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.6rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .logo i {
+            font-size: 2rem;
+            color: #009cde;
+            background: #fff;
+            border-radius: 8px;
+            padding: 4px 6px;
+        }
+
+        .logo span {
+            color: #fff;
+        }
+
+        .logo .paypal-text {
+            color: #009cde;
+        }
+
+        .header-phone {
+            background: rgba(255, 255, 255, 0.12);
+            padding: 10px 22px;
+            border-radius: 40px;
+            font-size: 1.25rem;
+            font-weight: 600;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(4px);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: 0.3s;
+        }
+
+        .header-phone:hover {
+            background: rgba(255, 255, 255, 0.22);
+            transform: scale(1.02);
+        }
+
+        .header-phone i {
+            color: #009cde;
+        }
+
+        .header-phone a {
+            color: #fff;
+        }
+
+        /* ───────────── Hero ───────────── */
+        .hero {
+            background: linear-gradient(135deg, #eef2f7 0%, #dce3ed 100%);
+            padding: 60px 0 50px;
+            text-align: center;
+            border-bottom: 4px solid #009cde;
+        }
+
+        .hero .badge {
+            display: inline-block;
+            background: #003087;
+            color: #fff;
+            padding: 6px 24px;
+            border-radius: 40px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            color: #001f5e;
+            line-height: 1.2;
+            margin-bottom: 16px;
+        }
+
+        .hero h1 .highlight {
+            color: #009cde;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #2d3a4a;
+            max-width: 680px;
+            margin: 0 auto 30px;
+        }
+
+        .hero .phone-display {
+            display: inline-flex;
+            align-items: center;
+            gap: 16px;
+            background: #fff;
+            padding: 14px 40px 14px 32px;
+            border-radius: 60px;
+            box-shadow: 0 8px 30px rgba(0, 48, 135, 0.18);
+            margin-bottom: 28px;
+            border: 2px solid #009cde;
+        }
+
+        .hero .phone-display i {
+            font-size: 2rem;
+            color: #009cde;
+        }
+
+        .hero .phone-display .number {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: #003087;
+            letter-spacing: 1px;
+        }
+
+        .hero .phone-display .label {
+            font-size: 0.9rem;
+            color: #5a6b7e;
+            font-weight: 500;
+        }
+
+        .btn-call {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: #009cde;
+            color: #fff;
+            padding: 18px 48px;
+            border-radius: 60px;
+            font-size: 1.25rem;
+            font-weight: 700;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 6px 20px rgba(0, 156, 222, 0.35);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .btn-call:hover {
+            background: #0077b3;
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(0, 156, 222, 0.45);
+        }
+
+        .btn-call i {
+            font-size: 1.4rem;
+        }
+
+        .btn-call-outline {
+            background: transparent;
+            color: #003087;
+            border: 2px solid #003087;
+            box-shadow: none;
+        }
+
+        .btn-call-outline:hover {
+            background: #003087;
+            color: #fff;
+            box-shadow: 0 8px 25px rgba(0, 48, 135, 0.3);
+        }
+
+        .hero .sub-actions {
+            margin-top: 24px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 14px;
+        }
+
+        /* ───────────── Trust / Stats ───────────── */
+        .trust-bar {
+            background: #fff;
+            padding: 28px 0;
+            border-bottom: 1px solid #e6eaef;
+        }
+
+        .trust-bar .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px 60px;
+        }
+
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1rem;
+            font-weight: 500;
+            color: #2d3a4a;
+        }
+
+        .trust-item i {
+            color: #009cde;
+            font-size: 1.6rem;
+        }
+
+        .trust-item strong {
+            color: #003087;
+        }
+
+        /* ───────────── Features / Cards ───────────── */
+        .features {
+            padding: 60px 0 40px;
+            background: #fff;
+        }
+
+        .features .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #001f5e;
+            margin-bottom: 12px;
+        }
+
+        .features .section-sub {
+            text-align: center;
+            color: #5a6b7e;
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 28px;
+        }
+
+        .card {
+            background: #f8faff;
+            padding: 32px 24px;
+            border-radius: 20px;
+            border: 1px solid #e6eaef;
+            transition: 0.3s;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 40px rgba(0, 48, 135, 0.08);
+            border-color: #009cde;
+        }
+
+        .card i {
+            font-size: 2.8rem;
+            color: #009cde;
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .card h3 {
+            font-size: 1.2rem;
+            color: #001f5e;
+            margin-bottom: 8px;
+        }
+
+        .card p {
+            color: #5a6b7e;
+            font-size: 0.95rem;
+        }
+
+        .card .btn-call-sm {
+            margin-top: 18px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #003087;
+            color: #fff;
+            padding: 10px 24px;
+            border-radius: 40px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .card .btn-call-sm:hover {
+            background: #009cde;
+            transform: scale(1.04);
+        }
+
+        /* ───────────── CTA Banner ───────────── */
+        .cta-banner {
+            background: linear-gradient(135deg, #003087, #001f5e);
+            color: #fff;
+            padding: 50px 0;
+            text-align: center;
+            margin: 20px 0 0;
+        }
+
+        .cta-banner h2 {
+            font-size: 2.4rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .cta-banner p {
+            font-size: 1.15rem;
+            opacity: 0.85;
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+
+        .cta-banner .btn-call {
+            background: #fff;
+            color: #003087;
+            box-shadow: 0 6px 24px rgba(0, 0, 0, 0.25);
+        }
+
+        .cta-banner .btn-call:hover {
+            background: #e6eaef;
+            transform: translateY(-3px);
+        }
+
+        /* ───────────── FAQ / Accordion ───────────── */
+        .faq-section {
+            padding: 60px 0 40px;
+            background: #f5f7fa;
+        }
+
+        .faq-section .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #001f5e;
+            margin-bottom: 30px;
+        }
+
+        .faq-grid {
+            max-width: 780px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: #fff;
+            padding: 20px 28px;
+            border-radius: 16px;
+            margin-bottom: 14px;
+            border: 1px solid #e6eaef;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+        }
+
+        .faq-item strong {
+            display: block;
+            font-size: 1.05rem;
+            color: #001f5e;
+            margin-bottom: 4px;
+        }
+
+        .faq-item p {
+            color: #3d4e62;
+            font-size: 0.98rem;
+        }
+
+        .faq-item .faq-phone {
+            color: #009cde;
+            font-weight: 700;
+        }
+
+        /* ───────────── Footer ───────────── */
+        .footer {
+            background: #001225;
+            color: #a0b3cc;
+            padding: 30px 0;
+            text-align: center;
+            font-size: 0.9rem;
+            border-top: 3px solid #009cde;
+        }
+
+        .footer a {
+            color: #009cde;
+        }
+
+        .footer .footer-phone {
+            display: inline-block;
+            margin: 10px 0 6px;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        /* ───────────── Floating Call Button ───────────── */
+        .floating-call {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            z-index: 999;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: #009cde;
+            color: #fff;
+            padding: 14px 26px 14px 20px;
+            border-radius: 60px;
+            box-shadow: 0 8px 32px rgba(0, 156, 222, 0.5);
+            transition: 0.3s;
+            border: none;
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 1.1rem;
+            animation: floatPulse 2.5s ease-in-out infinite;
+        }
+
+        .floating-call:hover {
+            transform: scale(1.08);
+            background: #0077b3;
+            box-shadow: 0 12px 40px rgba(0, 156, 222, 0.65);
+        }
+
+        .floating-call i {
+            font-size: 1.8rem;
+            animation: ring 1.8s ease-in-out infinite;
+        }
+
+        .floating-call .call-label {
+            display: inline-block;
+        }
+
+        .floating-call .call-number {
+            font-weight: 800;
+            letter-spacing: 0.5px;
+        }
+
+        @keyframes floatPulse {
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-8px);
+            }
+        }
+
+        @keyframes ring {
+            0%,
+            100% {
+                transform: rotate(0deg);
+            }
+            10% {
+                transform: rotate(20deg);
+            }
+            20% {
+                transform: rotate(-20deg);
+            }
+            30% {
+                transform: rotate(12deg);
+            }
+            40% {
+                transform: rotate(-12deg);
+            }
+            50% {
+                transform: rotate(0deg);
+            }
+        }
+
+        /* ───────────── Responsive ───────────── */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 2.4rem;
+            }
+            .hero .phone-display .number {
+                font-size: 1.8rem;
+            }
+            .floating-call .call-label {
+                display: none;
+            }
+            .floating-call {
+                padding: 14px 18px;
+                border-radius: 50%;
+            }
+            .floating-call .call-number {
+                display: none;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header .container {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .header-phone {
+                font-size: 1rem;
+                padding: 8px 16px;
+            }
+            .hero {
+                padding: 40px 0 35px;
+            }
+            .hero h1 {
+                font-size: 1.9rem;
+            }
+            .hero p {
+                font-size: 1rem;
+            }
+            .hero .phone-display {
+                flex-wrap: wrap;
+                justify-content: center;
+                padding: 16px 24px;
+                gap: 6px;
+            }
+            .hero .phone-display .number {
+                font-size: 1.5rem;
+            }
+            .btn-call {
+                padding: 14px 28px;
+                font-size: 1rem;
+            }
+            .card-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .cta-banner h2 {
+                font-size: 1.8rem;
+            }
+            .floating-call {
+                bottom: 18px;
+                right: 18px;
+                padding: 12px 16px;
+            }
+            .floating-call i {
+                font-size: 1.6rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.6rem;
+            }
+            .hero .phone-display .number {
+                font-size: 1.3rem;
+            }
+            .hero .phone-display {
+                padding: 12px 16px;
+            }
+            .card-grid {
+                grid-template-columns: 1fr;
+            }
+            .trust-bar .container {
+                gap: 14px 24px;
+            }
+            .trust-item {
+                font-size: 0.85rem;
+            }
+            .header-phone {
+                font-size: 0.9rem;
+                padding: 6px 14px;
+            }
+            .logo {
+                font-size: 1.3rem;
+            }
+            .cta-banner h2 {
+                font-size: 1.4rem;
+            }
+            .faq-item {
+                padding: 16px 18px;
+            }
+            .floating-call {
+                bottom: 14px;
+                right: 14px;
+                padding: 10px 14px;
+            }
+            .floating-call i {
+                font-size: 1.4rem;
+            }
+        }
+
+        /* ───────────── Extra: clickable area touch-friendly ───────────── */
+        .clickable-area {
+            cursor: pointer;
+        }
+
+        /* small helper for inline phone links */
+        .phone-link {
+            color: inherit;
+            font-weight: inherit;
+        }
+        .phone-link:hover {
+            text-decoration: underline;
+        }
+
+        /* accessibility: focus ring */
+        a:focus-visible,
+        button:focus-visible {
+            outline: 3px solid #009cde;
+            outline-offset: 2px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ─── HEADER ─── -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <i class="fab fa-paypal"></i>
+                <span>Pay<span class="paypal-text">Pal</span></span>
+                <span style="font-weight:400; font-size:0.9rem; opacity:0.7; margin-left:4px;">Support</span>
+            </div>
+            <div class="header-phone">
+                <i class="fas fa-phone-alt"></i>
+                <a href="tel:+1 (888) 628-0152" class="phone-link">+1 (888) 628-0152</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ─── HERO ─── -->
+    <section class="hero">
+        <div class="container">
+            <div class="badge"><i class="fas fa-headset"></i> &nbsp; 24/7 Help Center</div>
+            <h1>
+                Need Help with <span class="highlight">PayPal</span>?<br />
+                We're Here for You.
+            </h1>
+            <p>
+                Speak with a live support specialist now. Fast, secure, and
+                toll‑free assistance for all your PayPal questions.
+            </p>
+
+            <!-- Primary phone display -->
+            <div class="phone-display">
+                <i class="fas fa-phone-volume"></i>
+                <div>
+                    <div class="label">Call Toll‑Free</div>
+                    <div class="number">+1 (888) 628-0152</div>
+                </div>
+            </div>
+
+            <!-- Primary CTA -->
+            <a href="tel:+1 (888) 628-0152" class="btn-call">
+                <i class="fas fa-phone-alt"></i> Call Now
+            </a>
+
+            <div class="sub-actions">
+                <a href="tel:+1 (888) 628-0152" class="btn-call btn-call-outline">
+                    <i class="fas fa-comment-dots"></i> Speak to Agent
+                </a>
+                <a href="tel:+1 (888) 628-0152" class="btn-call btn-call-outline">
+                    <i class="fas fa-shield-alt"></i> Secure Support
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── TRUST BAR ─── -->
+    <section class="trust-bar">
+        <div class="container">
+            <div class="trust-item"><i class="fas fa-clock"></i> <strong>24/7</strong> Availability</div>
+            <div class="trust-item"><i class="fas fa-lock"></i> <strong>Secure</strong> &amp; Encrypted</div>
+            <div class="trust-item"><i class="fas fa-user-check"></i> <strong>Verified</strong> Specialists</div>
+            <div class="trust-item"><i class="fas fa-phone"></i> <strong>Toll‑Free</strong> Calls</div>
+        </div>
+    </section>
+
+    <!-- ─── FEATURES / CARDS ─── -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">How Can We Assist You?</h2>
+            <p class="section-sub">
+                Choose a topic below or simply call us — we're ready to help.
+            </p>
+
+            <div class="card-grid">
+                <!-- Card 1 -->
+                <div class="card">
+                    <i class="fas fa-credit-card"></i>
+                    <h3>Account &amp; Payments</h3>
+                    <p>Transactions, refunds, disputes, and payment issues.</p>
+                    <a href="tel:+1 (888) 628-0152" class="btn-call-sm">
+                        <i class="fas fa-phone"></i> Call Now
+                    </a>
+                </div>
+                <!-- Card 2 -->
+                <div class="card">
+                    <i class="fas fa-user-lock"></i>
+                    <h3>Security &amp; Fraud</h3>
+                    <p>Report suspicious activity, secure your account.</p>
+                    <a href="tel:+1 (888) 628-0152" class="btn-call-sm">
+                        <i class="fas fa-phone"></i> Call Now
+                    </a>
+                </div>
+                <!-- Card 3 -->
+                <div class="card">
+                    <i class="fas fa-receipt"></i>
+                    <h3>Billing &amp; Subscriptions</h3>
+                    <p>Manage automatic payments, invoices, and plans.</p>
+                    <a href="tel:+1 (888) 628-0152" class="btn-call-sm">
+                        <i class="fas fa-phone"></i> Call Now
+                    </a>
+                </div>
+                <!-- Card 4 -->
+                <div class="card">
+                    <i class="fas fa-globe"></i>
+                    <h3>International Transfers</h3>
+                    <p>Currency conversion, cross‑border fees, and more.</p>
+                    <a href="tel:+1 (888) 628-0152" class="btn-call-sm">
+                        <i class="fas fa-phone"></i> Call Now
+                    </a>
+                </div>
+            </div>
+
+            <!-- Extra CTA in the middle of cards -->
+            <div style="text-align:center; margin-top:40px;">
+                <a href="tel:+1 (888) 628-0152" class="btn-call" style="background:#003087; box-shadow:0 6px 24px rgba(0,48,135,0.35);">
+                    <i class="fas fa-headset"></i> Talk to a Specialist Now
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── CTA BANNER ─── -->
+    <section class="cta-banner">
+        <div class="container">
+            <h2>We're Just a Call Away</h2>
+            <p>
+                Our team is ready to resolve your PayPal issues quickly.
+                Don't wait — get the help you need right now.
+            </p>
+            <a href="tel:+1 (888) 628-0152" class="btn-call">
+                <i class="fas fa-phone-alt"></i> +1 (888) 628-0152
+            </a>
+            <div style="margin-top:18px; font-size:0.95rem; opacity:0.7;">
+                <i class="fas fa-microphone-alt"></i> Live agents available 24/7
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── FAQ ─── -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <strong><i class="fas fa-phone" style="color:#009cde;"></i> How do I speak to a live person?</strong>
+                    <p>Simply call <span class="faq-phone">+1 (888) 628-0152</span> and follow the prompts. Our agents are available 24/7.</p>
+                </div>
+                <div class="faq-item">
+                    <strong><i class="fas fa-clock"></i> What are the support hours?</strong>
+                    <p>We're here <strong>24 hours a day, 7 days a week</strong> — including holidays.</p>
+                </div>
+                <div class="faq-item">
+                    <strong><i class="fas fa-shield-alt"></i> Is my call secure?</strong>
+                    <p>Yes. All calls are encrypted and handled by verified PayPal support specialists.</p>
+                </div>
+                <div class="faq-item" style="border-left:4px solid #009cde;">
+                    <strong><i class="fas fa-bolt"></i> Quick action:</strong>
+                    <p>Call now for immediate assistance &rarr; <a href="tel:+1 (888) 628-0152" style="font-weight:700; color:#003087;">+1 (888) 628-0152</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── FOOTER ─── -->
+    <footer class="footer">
+        <div class="container">
+            <div>
+                <i class="fab fa-paypal" style="font-size:1.8rem; color:#009cde;"></i>
+                <div class="footer-phone">
+                    <a href="tel:+1 (888) 628-0152" style="color:#fff;">+1 (888) 628-0152</a>
+                </div>
+                <p style="margin:8px 0 4px;">
+                    &copy; 2026 PayPal Help &amp; Support &bull; Toll‑Free Assistance
+                </p>
+                <p style="font-size:0.8rem; opacity:0.5;">
+                    This is an independent support resource. Not affiliated with PayPal Inc.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ─── FLOATING CALL BUTTON ─── -->
+    <a href="tel:+18886280152" class="floating-call" aria-label="Call PayPal Support">
+        <i class="fas fa-phone-alt"></i>
+        <span class="call-label">Call Now &nbsp;</span>
+        <span class="call-number">+1 (888) 628-0152</span>
+    </a>
+
+    <!-- ─── Optional: click tracking / analytics placeholder ─── -->
+    <!--
+    All call buttons link to tel:+1 (888) 628-0152.
+    You can add event listeners here if needed.
+    -->
+</body>
+</html>
